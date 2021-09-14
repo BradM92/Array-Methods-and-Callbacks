@@ -1,6 +1,7 @@
 const { fifaData } = require('./fifa.js')
 
 // ⚽️ M  V P ⚽️ //
+// first commit
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
