@@ -101,7 +101,7 @@ function getWinnersByYear(Task5array, getYearsCB, GetWinnersCB) {
    let GetWinnersYears = getYearsCB(Task5array, getFinals);
     let GetWinningcountry = GetWinnersCB(Task5array,getFinals);
     let YearWinnerString = [];
-    for(let i = 0; i<= GetWinnersYears.length; i++){
+    for(let i = 0; i< GetWinnersYears.length; i++){
         YearWinnerString.push(`In ${GetWinnersYears[i]}, ${GetWinningcountry[i]} won the world cup!`)
     }
     return YearWinnerString;
@@ -120,9 +120,15 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
+function getAverageGoals(dataPass) {
    /* code here */
-}
+   const HomeGoals = dataPass.reduce(function(acc, item){
+    return acc+ item['Home Team Goals'] + item['Away Team Goals'];
+},0)
+    return (HomeGoals / dataPass.length).toFixed(2);
+};
+console.log(getAverageGoals(getFinals(fifaData)));
+
 
 
 
